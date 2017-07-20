@@ -26,15 +26,15 @@ module.exports = {
       loader: 'babel-loader',
       exclude: /node_modules/,
       query: {
-        presets: ['es2015', 'react']
+        presets: ['es2015', 'react'],
         plugins: ['transform-object-rest-spread']
-      }, {
-        test: /\.css$/,
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
-      }, {
-        test: /\.woff|.woff2|.ttf|.eot|.svg*.*$/,
-        loader: 'file'
       }
+    }, {
+      test: /\.css$/,
+      loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
+    }, {
+      test: /\.woff|.woff2|.ttf|.eot|.svg*.*$/,
+      loader: 'file'
     }]
   }
 }
